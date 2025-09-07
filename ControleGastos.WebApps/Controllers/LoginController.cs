@@ -1,8 +1,8 @@
-﻿using ControleGastos.Data;
-using ControleGastos.Models;
+﻿using ControleGastos.ControleGastos.Infra.Data;
+using ControleGastos.ControleGastos.Business.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ControleGastos.Controllers
+namespace ControleGastos.WebApps.Controllers
 {
     public class LoginController : Controller
     {
@@ -18,12 +18,13 @@ namespace ControleGastos.Controllers
             return View();
         }
 
+        [HttpPost]
         public IActionResult Cadastrar([FromForm] string Nome, [FromForm] string Email, [FromForm] string Senha, [FromForm] string ConfirmarSenha)
         {
             var existe = _context.User.Any(u => u.Email == Email);
             if (existe)
             {
-                TempData["Erro"] = "Email já cadastrado";
+                TempData["Error"] = "Email já cadastrado";
                 return RedirectToAction("Index", "Login");
             }
 
@@ -45,9 +46,19 @@ namespace ControleGastos.Controllers
             return RedirectToAction("Index", "Login");
         }
 
-        public IActionResult Autenticacao()
+        [HttpPost]
+        public IActionResult Autenticacao([FromForm] string Email, [FromForm] string Senha)
         {
-            return RedirectToAction("Index");
+            var usuario = _context.User.FirstOrDefault(u => u.Email == Email);
+
+            if (usuario == null || !BCrypt.Net.BCrypt.Verify(Senha, usuario.SenhaHash))
+            {
+                TempData["Error"] = "Usuário ou senha inválidos!";
+                return RedirectToAction("Index", "Login");
+            }
+
+            TempData["Success"] = "Login realizado com sucesso!";
+            return RedirectToAction("Index", "DashBoard");
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using ControleGastos.Data;
+﻿using ControleGastos.ControleGastos.Infra.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +8,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer("Server=KELVIN-DESKTOP;Database=ControleGastosDB;Trusted_Connection=True;TrustServerCertificate=True"));
 
 // Outros serviços
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddRazorOptions(options =>
+    {
+        options.ViewLocationFormats.Clear();
+        options.ViewLocationFormats.Add("/ControleGastos.WebApps/Views/{1}/{0}.cshtml");
+        options.ViewLocationFormats.Add("/ControleGastos.WebApps/Views/Shared/{0}.cshtml");
+    });
 
 var app = builder.Build();
 
@@ -33,6 +39,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Login}/{action=Index}/{id?}");
+    pattern: "{controller=DashBoard}/{action=Index}/{id?}");
 
 app.Run();

@@ -1,4 +1,4 @@
-﻿namespace ControleGastos.Models
+﻿namespace ControleGastos.ControleGastos.Business.Models
 {
     public class Categoria
     {

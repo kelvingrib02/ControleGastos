@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using ControleGastos.Models;
+using ControleGastos.ControleGastos.Business.Models;
 
-namespace ControleGastos.Controllers;
+namespace ControleGastos.WebApps.Controllers;
 
 public class HomeController : Controller
 {

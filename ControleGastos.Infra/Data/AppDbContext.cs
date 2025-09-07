@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ControleGastos.Models;
+using ControleGastos.ControleGastos.Business.Models;
 
-namespace ControleGastos.Data
+namespace ControleGastos.ControleGastos.Infra.Data
 {
     public class AppDbContext : DbContext
     {
