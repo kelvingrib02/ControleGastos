@@ -8,7 +8,7 @@
         </div>
     }
 
-    @if (TempData["Erro"] != null)
+    @if (TempData["Error"] != null)
     {
         <div class="alert alert-danger text-center">
             @TempData["Error"]
@@ -67,8 +67,8 @@
             <div class="tab-pane fade show active" id="login" role="tabpanel">
                 <form method="post" action="/Login/Autenticacao">
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="Email" required />
+                        <label for="username" class="form-label">Login</label>
+                        <input type="text" class="form-control" id="username" name="UserName" required />
                     </div>
                     <div class="mb-3">
                         <label for="senha" class="form-label">Senha</label>
@@ -85,8 +85,8 @@
                         <input type="text" class="form-control" id="nome" name="Nome" required />
                     </div>
                     <div class="mb-3">
-                        <label for="emailCadastro" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="emailCadastro" name="Email" required />
+                        <label for="usernameCadastro" class="form-label">Login</label>
+                        <input type="text" class="form-control" id="usernameCadastro" name="UserName" required />
                     </div>
                     <div class="mb-3">
                         <label for="senhaCadastro" class="form-label">Senha</label>

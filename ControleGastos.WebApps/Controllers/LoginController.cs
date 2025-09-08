@@ -19,12 +19,12 @@ namespace ControleGastos.WebApps.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cadastrar([FromForm] string Nome, [FromForm] string Email, [FromForm] string Senha, [FromForm] string ConfirmarSenha)
+        public IActionResult Cadastrar([FromForm] string Nome, [FromForm] string UserName, [FromForm] string Senha, [FromForm] string ConfirmarSenha)
         {
-            var existe = _context.User.Any(u => u.Email == Email);
+            var existe = _context.User.Any(u => u.UserName == UserName);
             if (existe)
             {
-                TempData["Error"] = "Email já cadastrado";
+                TempData["Error"] = "Usuário já cadastrado";
                 return RedirectToAction("Index", "Login");
             }
 
@@ -33,9 +33,9 @@ namespace ControleGastos.WebApps.Controllers
             var novoUsuario = new User
             {
                 Nome = Nome,
-                Email = Email,
+                UserName = UserName,
                 SenhaHash = senhaCript,
-                Ativo = false
+                Ativo = true
             };
 
             _context.User.Add(novoUsuario);
@@ -47,13 +47,19 @@ namespace ControleGastos.WebApps.Controllers
         }
 
         [HttpPost]
-        public IActionResult Autenticacao([FromForm] string Email, [FromForm] string Senha)
+        public IActionResult Autenticacao([FromForm] string UserName, [FromForm] string Senha)
         {
-            var usuario = _context.User.FirstOrDefault(u => u.Email == Email);
+            var usuario = _context.User.FirstOrDefault(u => u.UserName == UserName);
 
             if (usuario == null || !BCrypt.Net.BCrypt.Verify(Senha, usuario.SenhaHash))
             {
                 TempData["Error"] = "Usuário ou senha inválidos!";
+                return RedirectToAction("Index", "Login");
+            }
+
+            if (!usuario.Ativo)
+            {
+                TempData["Error"] = "Usuário inativado!";
                 return RedirectToAction("Index", "Login");
             }
 
