@@ -102,10 +102,16 @@
                             <label for="valor" class="form-label">Valor</label>
                             <input type="number" class="form-control" id="valor" required>
                         </div>
-                        @foreach (var forma in Enum.GetValues(typeof(FormaPagamento)))
-                        {
-                            <option value="@forma">@forma</option>
-                        }
+                        <div class="mb-3">
+                            <label for="formaPagamento" class="form-label">Forma de Pagamento</label>
+                            <select class="form-select" id="formaPagamento" required>
+                                <option value="">Selecione</option>
+                                @foreach (var forma in Enum.GetValues(typeof(FormaPagamento)))
+                                {
+                                    <option value="@forma">@forma</option>
+                                }
+                            </select>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -138,7 +144,7 @@
                 body: JSON.stringify({
                     descricao,
                     valor,
-                    tipo: abaId,
+                    tipo: 'teste',
                     userId,
                     formaPagamento,
                     categoriaId: 1,
@@ -155,7 +161,7 @@
                         alert("Erro ao registrar gasto.");
                     }
                 })
-                .catch(err => console.error(err));
+                .catch(err => console.error("Erro na requisição:", err));
         }
     </script>
 </body>

@@ -2,10 +2,10 @@
 {
     public enum FormaPagamento
     {
-        Dinheiro,
-        CartaoCredito,
-        CartaoDebito,
+        Debito,
+        Credito,
         Pix,
+        Dinheiro,
         Transferencia,
         Boleto
     }

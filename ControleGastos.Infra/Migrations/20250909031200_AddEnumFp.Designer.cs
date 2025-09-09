@@ -4,6 +4,7 @@ using ControleGastos.ControleGastos.Infra.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ControleGastos.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250909031200_AddEnumFp")]
+    partial class AddEnumFp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -146,17 +149,21 @@ namespace ControleGastos.Migrations
 
             modelBuilder.Entity("ControleGastos.ControleGastos.Business.Models.Transacao", b =>
                 {
-                    b.HasOne("ControleGastos.ControleGastos.Business.Models.Categoria", null)
+                    b.HasOne("ControleGastos.ControleGastos.Business.Models.Categoria", "Categoria")
                         .WithMany("Transacoes")
                         .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ControleGastos.ControleGastos.Business.Models.User", null)
+                    b.HasOne("ControleGastos.ControleGastos.Business.Models.User", "User")
                         .WithMany("Transacoes")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Categoria");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ControleGastos.ControleGastos.Business.Models.Categoria", b =>
