@@ -16,27 +16,6 @@ namespace ControleGastos.WebApps.Controllers
         public IActionResult Index()
         {
             return View();
-        }
-
-        [HttpPost]
-        public IActionResult RegistrarGasto([FromBody] Transacao tr)
-        {
-            var transacao = new Transacao
-            {
-                Descricao = tr.Descricao,
-                Valor = tr.Valor,
-                Tipo = tr.Tipo,
-                FormaPagamento = tr.FormaPagamento,
-                CategoriaId = tr.CategoriaId,
-                Data = DateTime.Now,
-                UserId = tr.UserId
-            };
-
-            _context.Transacao.Add(transacao);
-            _context.SaveChanges();
-
-            return Ok(new { mensagem = "Transação registrada com sucesso!" });
-        }
-
+        }      
     }
 }

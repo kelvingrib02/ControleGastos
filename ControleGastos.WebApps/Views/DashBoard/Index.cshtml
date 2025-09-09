@@ -1,4 +1,5 @@
-﻿@{
+﻿@using ControleGastos.ControleGastos.Business.Enums
+@{
     Layout = null;
 }
 
@@ -101,6 +102,10 @@
                             <label for="valor" class="form-label">Valor</label>
                             <input type="number" class="form-control" id="valor" required>
                         </div>
+                        @foreach (var forma in Enum.GetValues(typeof(FormaPagamento)))
+                        {
+                            <option value="@forma">@forma</option>
+                        }
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -125,8 +130,9 @@
             const abaAtiva = document.querySelector('.tab-pane.show.active');
             const abaId = abaAtiva?.id;
             const userId = userMap[abaId];
+            const formaPagamento = document.getElementById("formaPagamento").value;
 
-            fetch(`/DashBoard/RegistrarGasto`, {
+            fetch(`/Transacao/RegistrarGasto`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -134,7 +140,7 @@
                     valor,
                     tipo: abaId,
                     userId,
-                    formaPagamento: "Pix",
+                    formaPagamento,
                     categoriaId: 1,
                     data: new Date().toISOString()
                 })
