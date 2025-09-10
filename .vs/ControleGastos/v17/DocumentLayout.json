@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{08E098B0-8066-4797-95EF-EB22AA2CBC06}|ControleGastos.csproj|solutionrelative:controlegastos.webapps\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{08E098B0-8066-4797-95EF-EB22AA2CBC06}|ControleGastos.csproj|c:\\users\\55129\\documents\\projetos\\controlegastos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08E098B0-8066-4797-95EF-EB22AA2CBC06}|ControleGastos.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{08E098B0-8066-4797-95EF-EB22AA2CBC06}|ControleGastos.csproj|c:\\users\\55129\\documents\\projetos\\controlegastos\\controlegastos.business\\models\\transacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08E098B0-8066-4797-95EF-EB22AA2CBC06}|ControleGastos.csproj|solutionrelative:controlegastos.business\\models\\transacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08E098B0-8066-4797-95EF-EB22AA2CBC06}|ControleGastos.csproj|c:\\users\\55129\\documents\\projetos\\controlegastos\\controlegastos.webapps\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08E098B0-8066-4797-95EF-EB22AA2CBC06}|ControleGastos.csproj|solutionrelative:controlegastos.webapps\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08E098B0-8066-4797-95EF-EB22AA2CBC06}|ControleGastos.csproj|c:\\users\\55129\\documents\\projetos\\controlegastos\\controlegastos.business\\enums\\formapagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08E098B0-8066-4797-95EF-EB22AA2CBC06}|ControleGastos.csproj|solutionrelative:controlegastos.business\\enums\\formapagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08E098B0-8066-4797-95EF-EB22AA2CBC06}|ControleGastos.csproj|c:\\users\\55129\\documents\\projetos\\controlegastos\\controlegastos.webapps\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08E098B0-8066-4797-95EF-EB22AA2CBC06}|ControleGastos.csproj|solutionrelative:controlegastos.webapps\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,22 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleGastos\\ControleGastos.WebApps\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "ControleGastos.WebApps\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleGastos\\ControleGastos.WebApps\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "ControleGastos.WebApps\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T00:23:22.619Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -56,28 +42,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Transacao.cs",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleGastos\\ControleGastos.Business\\Models\\Transacao.cs",
               "RelativeDocumentMoniker": "ControleGastos.Business\\Models\\Transacao.cs",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleGastos\\ControleGastos.Business\\Models\\Transacao.cs",
               "RelativeToolTip": "ControleGastos.Business\\Models\\Transacao.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T03:23:46.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormaPagamento.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleGastos\\ControleGastos.Business\\Enums\\FormaPagamento.cs",
-              "RelativeDocumentMoniker": "ControleGastos.Business\\Enums\\FormaPagamento.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleGastos\\ControleGastos.Business\\Enums\\FormaPagamento.cs",
-              "RelativeToolTip": "ControleGastos.Business\\Enums\\FormaPagamento.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T03:20:00.19Z",
+              "WhenOpened": "2025-09-10T02:03:39.871Z",
               "EditorCaption": ""
             },
             {
@@ -88,9 +61,9 @@
               "RelativeDocumentMoniker": "ControleGastos.WebApps\\Views\\DashBoard\\Index.cshtml",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleGastos\\ControleGastos.WebApps\\Views\\DashBoard\\Index.cshtml",
               "RelativeToolTip": "ControleGastos.WebApps\\Views\\DashBoard\\Index.cshtml",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAqwJMAAAAbAAAA",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAHAAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-09T03:12:50.153Z",
+              "WhenOpened": "2025-09-10T02:02:48.691Z",
               "EditorCaption": ""
             },
             {
@@ -101,9 +74,35 @@
               "RelativeDocumentMoniker": "ControleGastos.WebApps\\Controllers\\TransacaoController.cs",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleGastos\\ControleGastos.WebApps\\Controllers\\TransacaoController.cs",
               "RelativeToolTip": "ControleGastos.WebApps\\Controllers\\TransacaoController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T03:12:42.622Z",
+              "WhenOpened": "2025-09-10T02:02:43.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DashBoardController.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleGastos\\ControleGastos.WebApps\\Controllers\\DashBoardController.cs",
+              "RelativeDocumentMoniker": "ControleGastos.WebApps\\Controllers\\DashBoardController.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleGastos\\ControleGastos.WebApps\\Controllers\\DashBoardController.cs",
+              "RelativeToolTip": "ControleGastos.WebApps\\Controllers\\DashBoardController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T02:02:15.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleGastos\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleGastos\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T02:02:03.903Z",
               "EditorCaption": ""
             }
           ]

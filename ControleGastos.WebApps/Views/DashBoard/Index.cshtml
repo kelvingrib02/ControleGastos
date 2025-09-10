@@ -108,7 +108,7 @@
                                 <option value="">Selecione</option>
                                 @foreach (var forma in Enum.GetValues(typeof(FormaPagamento)))
                                 {
-                                    <option value="@forma">@forma</option>
+                                    <option value="@((int)forma)">@forma</option>
                                 }
                             </select>
                         </div>
@@ -136,7 +136,7 @@
             const abaAtiva = document.querySelector('.tab-pane.show.active');
             const abaId = abaAtiva?.id;
             const userId = userMap[abaId];
-            const formaPagamento = document.getElementById("formaPagamento").value;
+            const formaPagamento = parseInt(document.getElementById("formaPagamento").value);
 
             fetch(`/Transacao/RegistrarGasto`, {
                 method: 'POST',
@@ -145,10 +145,9 @@
                     descricao,
                     valor,
                     tipo: 'teste',
-                    userId,
                     formaPagamento,
                     categoriaId: 1,
-                    data: new Date().toISOString()
+                    userId
                 })
             })
                 .then(res => {

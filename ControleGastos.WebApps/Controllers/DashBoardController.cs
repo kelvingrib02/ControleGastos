@@ -16,6 +16,6 @@ namespace ControleGastos.WebApps.Controllers
         public IActionResult Index()
         {
             return View();
-        }      
+        }
     }
 }
